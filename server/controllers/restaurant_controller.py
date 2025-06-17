@@ -22,7 +22,7 @@ def restaurant_by_id(id):
     return make_response(jsonify(restaurant.to_dict())), 200 
 
 # Deleting a retaurant  
-bp.route('/<int:id>',methods=['DELETE'])
+@bp.route('/<int:id>',methods=['DELETE'])
 def delete_restaurant(id):
     restaurant = Restaurant.query.get(id)
     if not restaurant:
