@@ -3,7 +3,7 @@ from server.extensions import db, migrate
 
 def create_app():
     app = Flask(__name__)
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://pizza_user:fidel123@localhost:5432/pizza_restaurant'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://pizza_user:hello@localhost:5432/pizzadb'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     
     # Initialize extensions

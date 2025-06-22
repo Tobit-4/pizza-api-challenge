@@ -1,6 +1,6 @@
-# server/seed.py
+
 from server.app import create_app
-from server import db
+from server.extensions import db
 from server.models.pizza import Pizza
 from server.models.restaurant import Restaurant
 from server.models.restaurant_pizza import RestaurantPizza
@@ -11,7 +11,6 @@ def seed_database():
     with app.app_context():
         print("🌱 Seeding database...")
         
-        # Clear existing data
         db.drop_all()
         db.create_all()
         
